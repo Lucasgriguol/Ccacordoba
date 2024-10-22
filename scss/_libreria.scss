@@ -1,0 +1,75 @@
+.contenedorlibro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 25px auto; 
+    justify-items: center; 
+}
+@media (max-width: $responsive) {
+    .contenedorlibro {
+        grid-template-columns: 1fr; 
+    }
+}
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    width: 100%; 
+    max-width: 300px; 
+}
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
+}
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+.card img:hover {
+    transform: scale(1.1);
+}
+.card h2 {
+    margin: 15px 0;
+    font-size: 2em;
+    color: #333;
+}
+.card p {
+    padding: 0 15px 15px;
+    color: #666;
+    font-size: 1.3rem;
+}
+.card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+.card button:hover {
+    background-color: #0056b3;
+}
+.card .price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.textolibreria{
+    text-align: center;
+    margin: 30px;
+}
